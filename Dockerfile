@@ -12,7 +12,6 @@ ADD entrypoint.sh /entrypoint.sh
 RUN apt-get update && apt-get -y install curl && apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* 
 
 EXPOSE 1521
-EXPOSE 8080
 VOLUME ["/docker-entrypoint-initdb.d"]
 
 ENTRYPOINT ["/entrypoint.sh"]
